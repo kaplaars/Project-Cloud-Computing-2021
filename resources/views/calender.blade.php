@@ -1,9 +1,9 @@
 @extends("master")
 <?php
-  $calender_url = 'http://ergast.com/api/f1/' . urlencode(date("Y")) .urlencode('.json');
+  $calender_url = 'http://ergast.com/api/f1/' . urlencode(date("Y")) .urlencode('.json');   //URL going to json of current season
 
-  $calender_json = file_get_contents($calender_url);
-  $calender_array = json_decode($calender_json, true);
+  $calender_json = file_get_contents($calender_url);                                        //saving the contents of the json
+  $calender_array = json_decode($calender_json, true);                                      //save it as an array
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,14 +28,14 @@
                 </td>
             </tr>
             <?php
-                if (!empty($calender_array)) {
-                    foreach ($calender_array['MRData']['RaceTable']['Races'] as $item) {
-                        $name = $item['Circuit']['circuitName'];
+                if (!empty($calender_array)) {                                                      //only when there is something in the array
+                    foreach ($calender_array['MRData']['RaceTable']['Races'] as $item) {            //for each race in the folder racetable in the folder mrdata
+                        $name = $item['Circuit']['circuitName'];                                    //get data out of the substructure's
                         $location = $item['Circuit']['Location']['locality'];
                         $country = $item['Circuit']['Location']['country'];
                         $time = $item['time'];
                         $date = $item['date'];
-                        echo "<tr><td><p>".$name."</p><p>".$country.", ".$location."</p><p>".$date.", ".$time."</p></tr>.</td>";
+                        echo "<tr><td><p>".$name."</p><p>".$country.", ".$location."</p><p>".$date.", ".$time."</p></tr>.</td>"; //print out in tabel form
                     }
                 }
             ?>
