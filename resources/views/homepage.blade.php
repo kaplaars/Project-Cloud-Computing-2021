@@ -13,9 +13,9 @@
             <th colspan = "2" > <h1>Formula fast</h1></th>
           </tr>
           <tr>
-            <td width = 33% align = "center"><h1>Headlights</h1></td>
-            <td width = 33% align = "center"><h1>Championship</h1></td>
-            <td width = 33% align = "center"><h1>How to win</h1></td>
+            <td width = 33% align = "center"><h1><a href="highlights">Highlights</a></h1></td>
+            <td width = 33% align = "center"><h1><a href="championschip">Championship</a></h1></td>
+            <td width = 33% align = "center"><h1><a href="howToWin">How to win</a></h1></td>
           </tr>
           <tr>
             <td><ul><li>hier gaat de comment sectie komen </li></ul></td>
@@ -24,9 +24,9 @@
                     <li>hier houd een database bij hoe groot de kans is dat een coureur op een positie finished</li></ul</td>
           </tr>
           <tr>
-            <td align = "center"><h1>Driver info</h1></td>
-            <td align = "center"><h1>Team info</h1></td>
-            <td align = "center"><h1>Calendar</h1></td>
+            <td align = "center"><h1><a href="driverInfo">Driver info</a></h1></td>
+            <td align = "center"><h1><a href="teamInfo">Team info</a></h1></td>
+            <td align = "center"><h1><a href="calender">Calendar</a></h1></td>
           </tr>
           <tr>
             <td><ul><li>See the latest news of your favorite racer</li></ul></td>

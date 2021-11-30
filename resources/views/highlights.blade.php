@@ -13,13 +13,14 @@
                 <th colspan = "2" > <h1>Formula fast</h1></th>
             </tr>
             <tr>
-                <td width = 33% align = "left" rowspan = '4'><ul> <li>Homepage</li>
-                                                                    <li>Championschip</li>
-                                                                    <li>How to win</li>
-                                                                    <li>Driver info</li>
-                                                                    <li>Team info</li>
-                                                                    <li>Calender</li>
-                                                                    </ul></td>
+                <td width = 33% align = "left" rowspan = '4'><ul> <li><a href="homepage">Homepage</a></li>
+                                                                  <li><a href="championschip">Championship</a></li>
+                                                                  <li><a href="howToWin">How to win</a></li>
+                                                                  <li><a href="driverInfo">Driver info</a></li>
+                                                                  <li><a href="teamInfo">Team info</a></li>
+                                                                  <li><a href="calender">Calendar</a></li>
+                                                                  </ul>
+                </td>
             </tr>
             <tr>
                 <td>comment</td>
