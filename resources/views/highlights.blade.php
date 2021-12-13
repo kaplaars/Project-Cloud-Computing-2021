@@ -9,7 +9,7 @@
     <body>
         <table id = "table" style="width:100%">
             <tr>
-                <th><img src="F1logo.jpg" alt="F1 logo" width="100%" ></th>
+                <th><img src="F1logo.jpg" alt="F1 logo" width="100%" id="mainLogo"></th>
                 <th colspan = "2" > <h1>Formula fast</h1></th>
             </tr>
             <tr>

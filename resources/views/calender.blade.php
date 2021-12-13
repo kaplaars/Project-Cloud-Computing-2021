@@ -1,6 +1,7 @@
 @extends("master")
 <?php
-  $calender_url = 'http://ergast.com/api/f1/' . urlencode(date("Y")) .urlencode('.json');   //URL going to json of current season
+  $year = date("Y");
+  $calender_url = 'http://ergast.com/api/f1/' . urlencode($year) .urlencode('.json');       //URL going to json of current season
 
   $calender_json = file_get_contents($calender_url);                                        //saving the contents of the json
   $calender_array = json_decode($calender_json, true);                                      //save it as an array
@@ -14,7 +15,7 @@
     <body>
         <table id = "table" style="width:100%">
             <tr>
-                <th><img src="F1logo.jpg" alt="F1 logo" width="100%" ></th>
+                <th><img src="F1logo.jpg" alt="F1 logo" width="100%" id="mainLogo"></th>
                 <th colspan = "2" > <h1>Formula fast</h1></th>
             </tr>
             <tr>
@@ -38,13 +39,23 @@
                         $title = $item['Circuit']['url'];
 
                         //api for getting the picture of wikipedia
-                        $pictures_json_url = 'http://en.wikipedia.org/w/api.php?action=query&formatversion=2&prop=pageimages%7Cpageterms&titles='.urlencode($title).'&format=json';
-                        $picture_json = file_get_contents($pictures_json_url);                                        //saving the contents of the json
-                        $picture_array = json_decode($picture_json, true);                                             //save it as an array
-                        //$wikipage_id = $picture_array['query']['pages'][0]['source'];
-                        ///////////
+                            //getting the wikiID from api 1
+                        $wikiid_json_url = 'https://en.wikipedia.org/w/api.php?action=query&formatversion=2&prop=pageimages%7Cpageterms&titles='.urlencode($name).'&format=json';
+                        $wikiid_json = file_get_contents($wikiid_json_url);                                        //saving the contents of the json
+                        $wikiid_array = json_decode($wikiid_json, true);                                            //save it as an array
+                        $wikiid = $wikiid_array['query']['pages'][0]['pageid'];
 
-                        echo "<tr><td><p>"/*.$wikipage_id."</p><p>"*/.$name."</p><p>".$country.", ".$location."</p><p>".$date.", ".$time."</p></tr>.</td>"; //print out in tabel form
+                            //getting the picture from api 2
+                        $picture_json_url = 'https://en.wikipedia.org/w/api.php?action=query&titles='.urlencode($name).'&prop=pageimages&format=json&pithumbsize=200';
+                        $picture_json = file_get_contents($picture_json_url);                                        //saving the contents of the json
+                        $picture_array = json_decode($picture_json, true);
+                        if(isset($picture_array['query']['pages'][$wikiid]['thumbnail'])){
+                            $wikipicture_url = $picture_array['query']['pages'][$wikiid]['thumbnail']['source'];
+                        }else{
+                            $wikipicture_url = "Sorry, picture not found";
+                        }
+                        ///////////
+                        echo "<tr><td><img height='100%' alt='Sorry, picture not found' src=".$wikipicture_url."><p>".$name."</p><p>".$country.", ".$location."</p><p>".$date.", ".$time."</p></td></tr>"; //print out in tabel form
                     }
                 }
             ?>

@@ -19,5 +19,11 @@ class F1controller extends Controller
     public function calender(){
         return view('calender');
     }
+    public function driverInfo(){
+        return view('driverInfo');
+    }
+    public function teamInfo(){
+        return view('teamInfo');
+    }
 //-----------------------------------
 }

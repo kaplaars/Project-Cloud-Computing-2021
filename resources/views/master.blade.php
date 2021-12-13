@@ -20,8 +20,26 @@ and open the template in the editor.
             a{
                 color:white;
             }
+            #mainLogo{
+                width="100%";
+            }
+            img{
+                background-color: white;
+                color:black;
+                float: right;
+            }
+
         </style>
     </head>
     <body style="background-color: black;">
     </body>
 </html>
+
+<?php
+
+//list of api's
+/*
+    - API 1: https://ergast.com/mrd/            => Alles over F1, van kampioenschappen tot coureurs...black
+    - API 2: https://en.wikipedia.org/w/api.php => MediaWiki, om de ID van wikipediapagina's te vinden en vervolgens de thumbnail
+*/
+?>

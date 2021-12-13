@@ -21,3 +21,5 @@ Route::get('/homepage', [F1controller::class, 'homepage']);
 Route::get('/highlights', [F1controller::class, 'highlights']);
 Route::get('/championschip', [F1controller::class, 'championschip']);
 Route::get('/calender', [F1controller::class, 'calender']);
+Route::get('/driverInfo', [F1controller::class, 'driverInfo']);
+Route::get('/teamInfo', [F1controller::class, 'teamInfo']);
