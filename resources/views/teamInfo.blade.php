@@ -22,9 +22,9 @@
             </tr>
             <tr>
                 <td width = 33% align = "left" rowspan = '99'><ul><li><a href="homepage">Homepage</a></li>
+                                                                  <li><a href="championschip">Championship </a></li>
                                                                   <li><a href="highlights">Highlights</a></li>
                                                                   <li><a href="howToWin">How to win</a></li>
-                                                                  <li><a href="teamInfo">team info</a></li>
                                                                   <li><a href="teamInfo">Team info</a></li>
                                                                   <li><a href="calender">Calendar</a></li>
                                                              </ul>

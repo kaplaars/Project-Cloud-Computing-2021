@@ -25,5 +25,12 @@ class F1controller extends Controller
     public function teamInfo(){
         return view('teamInfo');
     }
+    public function howToWin(){
+        return view('howToWin');
+    }
+    public function login_page(){
+        return view('login_page');
+    }
 //-----------------------------------
+
 }

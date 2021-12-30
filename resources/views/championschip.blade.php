@@ -46,13 +46,7 @@
                     $teampos[$iteration_number] = $teamarray['position'];
                     $teampoints[$iteration_number] = $teamarray['points'];
                     $teamnationality[$iteration_number] = $teamarray['Constructor']['nationality'];
-                    /*//wikitest
-                    $wikiurl = $teamarray['Constructor']['url'];
-                    $placeInStr = strpos($wikiurl, "wiki/");
-                    //$wikiname = urlencode(substr($wikiurl, $placeInStr+5, -1));
-                    $wikiname = str_replace("_", " ", substr($wikiurl, $placeInStr+5, null));
-                    echo $wikiname;
-                    //*/
+
                     //api for getting the picture of wikipedia
                         //getting the wikiID from api 1
                         $wikiid_json_url = 'https://en.wikipedia.org/w/api.php?action=query&formatversion=2&prop=pageimages%7Cpageterms&titles='.urlencode($teamname).'&format=json';
